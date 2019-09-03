@@ -15,7 +15,7 @@ int main()
 	std::sort(arr.begin(), arr.end());
 	
 	dp[0] = arr[0].second;
-	dp[1] = std::min(arr[1].second + arr[0].second, arr[1].second);
+	dp[1] = arr[1].second;
 
 	for (int i = 2; i < N; i++)
 		dp[i] = arr[i].second + std::min(dp[i-1], dp[i-2]);
